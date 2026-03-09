@@ -1,0 +1,60 @@
+/*
+CSS RESETS
+*/
+
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Remove default spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Respect user font settings */
+html {
+  font-size: 100%;
+}
+
+main {
+  max-width: 60rem;
+  margin: 2rem auto;
+}
+/* Make images responsive */
+img {
+  width: 40rem;
+}
+
+.hidden {
+  display: none;
+}
+
+:root {
+  --bg-color: #f0f0f0;
+  --primary: #333;
+}
+
+body.dark {
+    --bg-color: #333;
+    --primary: #ff0000;
+}
+
+
+body{
+    color:var(--font-color);
+    background-color: var(--bg-color);
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
