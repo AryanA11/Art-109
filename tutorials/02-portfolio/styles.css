@@ -25,6 +25,9 @@ header {
 header .logo {
     margin: 0;
     font-size: 1.5rem;
+    color: #131313;
+    letter-spacing: .15em;
+    text-shadow: 1px -1px 0 #111, -1px 2px 1px #1a1a1a, -2px 4px 1px #2a2a2a, -3px 6px 1px #3a3a3a, -4px 8px 1px #4f4f4f, -5px 10px 1px #666, -6px 12px 1px #7d7d7d, -7px 14px 1px #949494, -8px 16px 1px #ababab, -9px 18px 1px #c2c0bf, -10px 20px 1px #decd9d;
 }
 
 nav {
@@ -122,13 +125,15 @@ nav a.active::after {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 0;
-    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5%;
 }
 
 .item {
+    flex: 1 1 280px;
+    max-width: 400px;
     margin: 5px;
     border: 2px solid #333;
     padding: 10px;
@@ -151,4 +156,93 @@ nav a.active::after {
     width: 100%;
     height: auto;
     display: block;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    background: #333;
+    border-top: 2px solid #020202;
+}
+
+footer .footer-name {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+footer .footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+footer span {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 10px;
+    }
+    header .logo {
+        font-size: 1.2rem;
+    }
+    nav {
+        gap: 10px;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+    .gallery {
+        padding: 3%;
+    }
+    .item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .video-container {
+        padding-top: 50px;
+    }
+    .video-container video {
+        max-width: 95%;
+    }
+    .about-page {
+        padding: 30px 15px;
+    }
+    .about-intro h2 {
+        font-size: 1.5rem;
+    }
+    .about-personality h2 {
+        font-size: 1.3rem;
+    }
+    .personality-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1rem;
+        text-shadow: 1px -1px 0 #111, -1px 2px 1px #1a1a1a, -2px 4px 1px #3a3a3a, -3px 6px 1px #666, -4px 8px 1px #decd9d;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 5px 6px;
+    }
 }
