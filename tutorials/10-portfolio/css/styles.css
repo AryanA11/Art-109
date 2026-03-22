@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #decd9d;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    background: #decd9d;
+    color: #fff;
+    border: 2px solid #020202;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #131313;
+    letter-spacing: .15em;
+    text-shadow: 1px -1px 0 #111, -1px 2px 1px #1a1a1a, -2px 4px 1px #2a2a2a, -3px 6px 1px #3a3a3a, -4px 8px 1px #4f4f4f, -5px 10px 1px #666, -6px 12px 1px #7d7d7d, -7px 14px 1px #949494, -8px 16px 1px #ababab, -9px 18px 1px #c2c0bf, -10px 20px 1px #decd9d;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.video-container video {
+    border-top: 6px solid #decd9d;
+    max-width: 80%;
+}
+
+.about-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.about-intro {
+    margin-bottom: 50px;
+}
+
+.about-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.about-personality h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.personality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.personality-card {
+    background: #fff;
+    border: 2px solid #333;
+    padding: 25px;
+}
+
+.personality-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.personality-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5%;
+}
+
+.item {
+    flex: 1 1 280px;
+    max-width: 400px;
+    margin: 5px;
+    border: 2px solid #333;
+    padding: 10px;
+    background: #fff;
+}
+
+.item:hover {
+    animation: fadeToGreen 1s ease forwards;
+}
+
+@keyframes fadeToGreen {
+    0%   { background: #fff; }
+    25%  { background: #c8e6c9; }
+    50%  { background: #81c784; }
+    75%  { background: #4caf50; }
+    100% { background: #2e7d32; }
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    background: #333;
+    border-top: 2px solid #020202;
+}
+
+footer .footer-name {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+footer .footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+footer span {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 10px;
+    }
+    header .logo {
+        font-size: 1.2rem;
+    }
+    nav {
+        gap: 10px;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+    .gallery {
+        padding: 3%;
+    }
+    .item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .video-container {
+        padding-top: 50px;
+    }
+    .video-container video {
+        max-width: 95%;
+    }
+    .about-page {
+        padding: 30px 15px;
+    }
+    .about-intro h2 {
+        font-size: 1.5rem;
+    }
+    .about-personality h2 {
+        font-size: 1.3rem;
+    }
+    .personality-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1rem;
+        text-shadow: 1px -1px 0 #111, -1px 2px 1px #1a1a1a, -2px 4px 1px #3a3a3a, -3px 6px 1px #666, -4px 8px 1px #decd9d;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 5px 6px;
+    }
+}
