@@ -193,10 +193,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-#baguetteBox-overlay {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
 @media (max-width: 768px) {
     header {
         flex-direction: column;
